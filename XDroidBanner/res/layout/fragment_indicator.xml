@@ -1,0 +1,241 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shape:"
+                    android:textColor="#0064CE"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rg_shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rb_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Circle" />
+
+                    <RadioButton
+                        android:id="@+id/rb_rect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rect" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Direction:"
+                    android:textColor="#0064CE"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rg_direction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rb_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Horizontal" />
+
+                    <RadioButton
+                        android:id="@+id/rb_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vertical" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Width:"
+                    android:textColor="#0064CE"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <SeekBar
+                    android:id="@+id/sb_width"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Height:"
+                    android:textColor="#0064CE"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <SeekBar
+                    android:id="@+id/sb_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Margin:"
+                    android:textColor="#0064CE"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <SeekBar
+                    android:id="@+id/sb_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="20" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Animation:"
+                    android:textColor="#0064CE"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cb_anim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="anim" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Color:"
+                    android:textColor="#0064CE"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btn_choose_select_color"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="Choose SelectColor"
+                        android:textSize="12dp" />
+
+                    <Button
+                        android:id="@+id/btn_choose_unselect_color"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="Choose UnselectColor"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WithColor:"
+                android:textColor="#880064CE"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp" >
+
+                <com.xdroid.banner.library.view.XDroidBanner
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true" >
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.xdroid.banner.library.indicator.InfiniteIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="10dip" />
+                </com.xdroid.banner.library.view.XDroidBanner>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WithDrawable:"
+                android:textColor="#880064CE"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" >
+
+                <com.xdroid.banner.library.view.XDroidBanner
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/banner_drawable"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true" >
+
+                    <android.support.v4.view.ViewPager
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.xdroid.banner.library.indicator.InfiniteIndicator
+                        android:id="@+id/indicator_drawable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="10dip" />
+                </com.xdroid.banner.library.view.XDroidBanner>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

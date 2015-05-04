@@ -1,0 +1,181 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AutoScrollMode:"
+                android:textColor="#0064CE"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_scrollmode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/rb_L2R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="left To right" />
+
+                <RadioButton
+                    android:id="@+id/rb_R2L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="right To left" />
+
+                <RadioButton
+                    android:id="@+id/rb_BAF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="back and forth" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TimeInterval:"
+                android:textColor="#0064CE"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/sb_timeinterval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="5000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Speed:"
+                android:textColor="#0064CE"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/sb_speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="5000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="State:"
+                android:textColor="#0064CE"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/cb_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pause" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="finite:"
+            android:textColor="#006227"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp" >
+
+            <com.xdroid.banner.library.view.XDroidBanner
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#88000000" >
+
+                    <com.xdroid.banner.library.indicator.InfiniteIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:padding="10dip" />
+                </RelativeLayout>
+            </com.xdroid.banner.library.view.XDroidBanner>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="infinite:"
+            android:textColor="#006227"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp" >
+
+            <com.xdroid.banner.library.view.XDroidBanner
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/banner_infinite"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true" >
+
+                <android.support.v4.view.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#88000000" >
+
+                    <com.xdroid.banner.library.indicator.InfiniteIndicator
+                        android:id="@+id/indicator_infinite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:padding="10dip" />
+                </RelativeLayout>
+            </com.xdroid.banner.library.view.XDroidBanner>
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>
