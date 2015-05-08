@@ -1,8 +1,10 @@
 # XDroidBanner
 An automatic scroll ViewPager 
-
+一个Banner自动滚动组件（功能强大）和一个可自定义的indicator
+效果可以先运行demo看下，相关使用说明后面更新
 #Usage
 in xml:
+
               <com.xdroid.banner.library.view.XDroidBanner
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/banner"
